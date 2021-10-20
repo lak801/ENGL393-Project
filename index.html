@@ -4,7 +4,10 @@
 <title>Instructions Project</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
@@ -37,6 +40,10 @@ body {
   text-decoration: none;
 }
 
+pre {
+  background-color: white;
+}
+
 .navbar a:hover {
   background-color: #2978A0;
   color: black;
@@ -59,6 +66,9 @@ img {
 
 }
 
+#intro {
+  padding: 40px;
+}
 
 .footer {
   padding: 20px;
@@ -104,32 +114,42 @@ p,li {
 	<h5>by Logan Krashnak</h5>
 </div>
 
-<nav class="navbar navbar-inverse" id="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#top">Top of Page</a></li>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#setting-up">Setting up the Environment</a></li>
-        <li><a href="#making-header">Making the Header</a></li>
-        <li><a href="#making-body">Making the Body</a></li>
-        <li><a href="#looking">Looking at Your Website</a></li>
-        <li><a href="#css">CSS Customization</a></li>
-        <li><a href="#future">Your Future</a></li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" id="navbar">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Back to Top</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#intro">Introduction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#setting-up">Setting up the Environment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#making-header">Making the Header</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#making-body">Making the Body</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#looking">Looking at Your Website</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#css">CSS Customization</a>
+      </li>
+    </ul>
   </div>
 </nav>
 
 <div class="body">
-  <div id="intro"><br><br><br><br></div>
+  <div id="intro"></div>
   <h2>Introduction</h2>  
   <p>Welcome! By the end of this guide, you will be able
     to make a website of your very own with html and css.
@@ -211,7 +231,6 @@ p,li {
       </code>
     </pre>
   </div>
-  <img src="https://i.gyazo.com/d50823df9e67a4dcf2f71791682bb236.png" alt="Image from Gyazo" width="797"/>
   <br>
   <ul>
     <li>Type &lt!DOCTYPE html&gt to tell your browser you are making
@@ -233,7 +252,26 @@ p,li {
 
   <p>Now, we will be making the stuff that people can actually see</p>
   <p>Here is another reference just in case you get lost!</p>
-  <img src="https://i.gyazo.com/bc80b0dcb5c74944c1af45c6d6c475b7.png" alt="Image from Gyazo" width="802"/>
+  <br>
+  <div>
+    <pre>
+      <code>
+        &lt!DOCTYPE html&gt
+        &lthtml&gt
+          &lthead&gt
+            &lttitle&gtExample&lt/title&gt
+            &ltmeta charset="UTF-8"&gt
+            &ltmeta name="viewport" content="width=device-width, intitial-scale=1"&gt
+            &ltstyle&gt&lt/style&gt
+          &lt/head&gt
+          &ltbody&gt
+            &lth1&gtExample Title&lt/h1&gt
+            &ltp&gtYour text goes here!&lt/p&gt
+          &lt/body&gt
+        &lt/html&gt
+      </code>
+    </pre>
+  </div>
   <br>
   <br>
   <ul>
@@ -253,6 +291,7 @@ p,li {
     <li>Then, go to where your html file is located and open it with your preferred web browser.</li>
     <li>You should now be looking at your website!</li>
   </ul>
+  <br>
   <img src="https://i.gyazo.com/fa55da43d8906c7173ffe95c31ec2f05.png" alt="Image from Gyazo" width="736"/>
   <div id="css"><br><br></div>
   <h2>CSS Customization</h2>
@@ -260,7 +299,31 @@ p,li {
   <ul>
     <li>Using those &ltstyle&gt&lt/style&gt tags from earlier, you are going to type in between them something that looks like this:</li>
     <br>
-    <img src="https://i.gyazo.com/89b11963d239ee5f25f75ebef5ad5214.png" alt="Image from Gyazo" width="794"/>
+    <div>
+      <pre>
+        <code>
+          &lt!DOCTYPE html&gt
+          &lthtml&gt
+            &lthead&gt
+              &lttitle&gtExample&lt/title&gt
+              &ltmeta charset="UTF-8"&gt
+              &ltmeta name="viewport" content="width=device-width, intitial-scale=1"&gt
+              &ltstyle&gt
+
+                h1 {
+                  color: purple;
+                }
+
+              &lt/style&gt
+            &lt/head&gt
+            &ltbody&gt
+              &lth1&gtExample Title&lt/h1&gt
+              &ltp&gtYour text goes here!&lt/p&gt
+            &lt/body&gt
+          &lt/html&gt
+        </code>
+      </pre>
+    </div>
     <br>
     <li>Now you can save your file and open your website to see that the header you made has a different colored text than the rest of your website.</li>
     <li>For a more in depth CSS guide, you can look <a href="https://www.w3schools.com/css/" target="_blank">here</a></li>
@@ -296,6 +359,12 @@ p,li {
       navbar.classList.remove("sticky");
     }
   }
+  const navLinks = document.querySelectorAll('.nav-item')
+  const menuToggle = document.getElementById('navbarSupportedContent')
+  const bsCollapse = new bootstrap.Collapse(menuToggle)
+  navLinks.forEach((l) => {
+    l.addEventListener('click', () => { bsCollapse.toggle() })
+  })
   </script>
 </body>
 </html>
